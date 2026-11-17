@@ -19,11 +19,11 @@ def create_social_media_pdf(output_pdf_path):
 
     styles = getSampleStyleSheet()
 
-    primary_color = colors.HexColor("#1B5E20")  # Dark Forest Green (matching theme)
-    accent_color = colors.HexColor("#2E7D32")   # Medium Green
-    dark_indigo = colors.HexColor("#1A237E")
+    primary_color = colors.HexColor("#374151")  # Slate Gray
+    accent_color = colors.HexColor("#4B5563")   # Medium Neutral Gray
+    dark_indigo = colors.HexColor("#1F2937")
     text_dark = colors.HexColor("#212121")
-    light_bg = colors.HexColor("#E8F5E9")
+    light_bg = colors.HexColor("#F3F4F6")
 
     title_style = ParagraphStyle(
         'DocTitle',
@@ -268,7 +268,7 @@ def create_social_media_pdf(output_pdf_path):
         ('BACKGROUND', (0, 0), (-1, 0), primary_color),
         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
         ('GRID', (0, 0), (-1, -1), 0.5, colors.HexColor("#B0BEC5")),
-        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor("#F9FBE7")]),
+        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor("#F9FAFB")]),
         ('TOPPADDING', (0, 0), (-1, -1), 3),
         ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
         ('LEFTPADDING', (0, 0), (-1, -1), 5),
@@ -346,7 +346,7 @@ def create_social_media_pdf(output_pdf_path):
         ('BACKGROUND', (0, 0), (-1, 0), primary_color),
         ('VALIGN', (0, 0), (-1, -1), 'TOP'),
         ('GRID', (0, 0), (-1, -1), 0.5, colors.HexColor("#B0BEC5")),
-        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor("#F9FBE7")]),
+        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor("#F9FAFB")]),
         ('TOPPADDING', (0, 0), (-1, -1), 4),
         ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
         ('LEFTPADDING', (0, 0), (-1, -1), 5),
@@ -498,7 +498,7 @@ def create_social_media_pdf(output_pdf_path):
         ('BACKGROUND', (0, -1), (-1, -1), accent_color),
         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
         ('GRID', (0, 0), (-1, -1), 0.5, colors.HexColor("#B0BEC5")),
-        ('ROWBACKGROUNDS', (0, 1), (-1, -2), [colors.white, colors.HexColor("#F9FBE7")]),
+        ('ROWBACKGROUNDS', (0, 1), (-1, -2), [colors.white, colors.HexColor("#F9FAFB")]),
         ('TOPPADDING', (0, 0), (-1, -1), 3),
         ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
         ('LEFTPADDING', (0, 0), (-1, -1), 5),

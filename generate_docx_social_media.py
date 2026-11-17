@@ -25,8 +25,8 @@ def create_docx(output_path):
         s.left_margin = Inches(0.5)
         s.right_margin = Inches(0.5)
 
-    primary_rgb = RGBColor(0x1B, 0x5E, 0x20)  # Forest Green
-    accent_rgb = RGBColor(0x2E, 0x7D, 0x32)
+    primary_rgb = RGBColor(0x37, 0x41, 0x51)  # Slate Gray #374151
+    accent_rgb = RGBColor(0x4B, 0x55, 0x63)   # Neutral Gray #4B5563
 
     # Title
     p_title = doc.add_paragraph()
@@ -48,8 +48,8 @@ def create_docx(output_path):
         row = table_meta.rows[row_idx]
         row.cells[0].text = c0
         row.cells[1].text = c1
-        set_cell_background(row.cells[0], "E8F5E9")
-        set_cell_background(row.cells[1], "E8F5E9")
+        set_cell_background(row.cells[0], "F3F4F6")
+        set_cell_background(row.cells[1], "F3F4F6")
         for cell in row.cells:
             for p in cell.paragraphs:
                 p.paragraph_format.space_before = Pt(2)
@@ -111,7 +111,7 @@ def create_docx(output_path):
     for i, h in enumerate(headers):
         cell = t_test.rows[0].cells[i]
         cell.text = h
-        set_cell_background(cell, "1B5E20")
+        set_cell_background(cell, "374151")
         for p in cell.paragraphs:
             p.runs[0].font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
             p.runs[0].font.bold = True
@@ -122,7 +122,7 @@ def create_docx(output_path):
         row.cells[0].text = t_action
         row.cells[1].text = t_expected
         row.cells[2].text = t_pf
-        bg = "FFFFFF" if r_idx % 2 == 0 else "F9FBE7"
+        bg = "FFFFFF" if r_idx % 2 == 0 else "F9FAFB"
         set_cell_background(row.cells[0], bg)
         set_cell_background(row.cells[1], bg)
         set_cell_background(row.cells[2], bg)
@@ -166,7 +166,7 @@ def create_docx(output_path):
     for i, h in enumerate(tr_headers):
         cell = t_tracing.rows[0].cells[i]
         cell.text = h
-        set_cell_background(cell, "1B5E20")
+        set_cell_background(cell, "374151")
         for p in cell.paragraphs:
             p.runs[0].font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
             p.runs[0].font.bold = True
@@ -177,7 +177,7 @@ def create_docx(output_path):
         row.cells[0].text = act
         row.cells[1].text = meth
         row.cells[2].text = desc
-        bg = "FFFFFF" if r_idx % 2 == 0 else "F9FBE7"
+        bg = "FFFFFF" if r_idx % 2 == 0 else "F9FAFB"
         set_cell_background(row.cells[0], bg)
         set_cell_background(row.cells[1], bg)
         set_cell_background(row.cells[2], bg)
@@ -261,7 +261,7 @@ def create_docx(output_path):
     for i, h in enumerate(rub_headers):
         cell = t_rub.rows[0].cells[i]
         cell.text = h
-        set_cell_background(cell, "1B5E20")
+        set_cell_background(cell, "374151")
         for p in cell.paragraphs:
             p.runs[0].font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
             p.runs[0].font.bold = True
@@ -272,7 +272,7 @@ def create_docx(output_path):
         row.cells[0].text = crit
         row.cells[1].text = pts
         row.cells[2].text = det
-        bg = "E8F5E9" if r_idx == len(rubric_items) - 1 else ("FFFFFF" if r_idx % 2 == 0 else "F9FBE7")
+        bg = "F3F4F6" if r_idx == len(rubric_items) - 1 else ("FFFFFF" if r_idx % 2 == 0 else "F9FAFB")
         set_cell_background(row.cells[0], bg)
         set_cell_background(row.cells[1], bg)
         set_cell_background(row.cells[2], bg)
